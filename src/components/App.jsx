@@ -1,6 +1,11 @@
+import Profile from 'components/profile/profile';
+import user from 'components/profile/user';
+import FriendList from 'components/friendList/friendList';
+import friends from 'components/friendList/friends';
+
 export const App = () => {
   return (
-    <div
+    <div key = {user.username}
       style={{
         height: '100vh',
         display: 'flex',
@@ -10,7 +15,13 @@ export const App = () => {
         color: '#010101'
       }}
     >
-      React homework template
+      <Profile
+      username = {user.username}
+      tag = {user.tag}
+      location = {user.location}
+      avatar = {user.avatar}
+      stats = {user.stats}
+      />
     </div>
   );
 };
