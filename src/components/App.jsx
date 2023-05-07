@@ -22,6 +22,8 @@ export const App = () => {
       avatar = {user.avatar}
       stats = {user.stats}
       />
+
+      <FriendList items = {friends}/>
     </div>
   );
 };
