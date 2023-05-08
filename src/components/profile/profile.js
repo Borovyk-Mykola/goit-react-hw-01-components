@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import { Description, DescriptionText, Stats, StatsList, StatsQuantity } from './profile.styled';
 
 const Profile = ({
     username,
@@ -9,31 +10,31 @@ const Profile = ({
 }) => { 
     return (
     <div className="profile" key={username}> 
-        <div className="description">
+        <Description>
             <img
             src={avatar}
             alt="User avatar"
             className="avatar"
             />
-            <p className="name">{username}</p>
-            <p className="tag">{tag}</p>
-            <p className="location">{location}</p>
-        </div>
+            <DescriptionText styleName>{username}</DescriptionText>
+            <DescriptionText>{tag}</DescriptionText>
+            <DescriptionText>{location}</DescriptionText>
+        </Description>
 
-        <ul className="stats">
-            <li>
-            <span className="label">Followers </span>
-            <span className="quantity">{stats.followers}</span>
-            </li>
-            <li>
-            <span className="label">Views </span>
-            <span className="quantity">{stats.views}</span>
-            </li>
-            <li>
-            <span className="label">Likes </span>
-            <span className="quantity">{stats.likes}</span>
-            </li>
-        </ul>
+        <Stats>
+            <StatsList>
+            <StatsQuantity label = 'true'>Followers </StatsQuantity>
+            <StatsQuantity>{stats.followers}</StatsQuantity>
+            </StatsList>
+            <StatsList>
+            <StatsQuantity label = 'true'>Views </StatsQuantity>
+            <StatsQuantity>{stats.views}</StatsQuantity>
+            </StatsList>
+            <StatsList marginZero = 'true'>
+            <StatsQuantity label = 'true'>Likes </StatsQuantity>
+            <StatsQuantity>{stats.likes}</StatsQuantity>
+            </StatsList>
+        </Stats>
     </div>
 );
 }

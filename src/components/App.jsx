@@ -16,7 +16,7 @@ export const App = () => {
         justifyContent: 'center',
         alignItems: 'center',
         fontSize: 40,
-        color: '#010101'
+        color: '#010101',
       }}
     >
       <Profile
@@ -26,11 +26,8 @@ export const App = () => {
       avatar = {user.avatar}
       stats = {user.stats}
       />
-
       <Statistics items = {data}/>
-
       <FriendList items = {friends}/>
-
       <TransactionHistory items = {transactions}/>
     </div>
   );

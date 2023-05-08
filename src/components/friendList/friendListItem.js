@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import { GrStatusGoodSmall } from 'react-icons/gr';
+import { Status,Item,TextName } from './friendListItem.styled';
 
 const FriendListItem = ({
     avatar,
@@ -7,12 +8,11 @@ const FriendListItem = ({
     isOnline,
 }) => { 
     return (
-    <li className="item" >
-        <GrStatusGoodSmall/>
-        <span className="status">{isOnline}</span>
-        <img className="avatar" src={avatar} alt="User avatar" width="48" />
-        <p className="name">{name}</p>
-    </li>
+    <Item>
+        <Status isOnline = {isOnline}><GrStatusGoodSmall/></Status>
+        <img className="avatar" src={avatar} alt="User avatar" width="128"/>
+        <TextName>{name}</TextName>
+    </Item>
 );
 }
 

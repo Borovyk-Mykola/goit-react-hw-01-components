@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import { CellTable } from './transactionItem.styled';
 
 const TransactionItem = ({
     type,
@@ -7,9 +8,9 @@ const TransactionItem = ({
 }) => { 
 return (
     <tr>
-        <td>{type}</td>
-        <td>{amount}</td>
-        <td>{currency}</td>
+        <CellTable>{type}</CellTable>
+        <CellTable>{amount}</CellTable>
+        <CellTable>{currency}</CellTable>
     </tr>
 )}
 
