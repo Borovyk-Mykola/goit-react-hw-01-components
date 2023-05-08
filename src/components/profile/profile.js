@@ -15,9 +15,9 @@ const Profile = ({
             alt="User avatar"
             className="avatar"
             />
-            <p className="name">name: {username}</p>
-            <p className="tag">tag: {tag}</p>
-            <p className="location">location: {location}</p>
+            <p className="name">{username}</p>
+            <p className="tag">{tag}</p>
+            <p className="location">{location}</p>
         </div>
 
         <ul className="stats">
